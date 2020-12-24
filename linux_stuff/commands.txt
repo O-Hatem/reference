@@ -1,0 +1,149 @@
+##Tricks##
+python3.8 -c "import module" 	# to check if you have the module installed or not on your machine. use echo $? to check
+!$								# reuses the same argurment list as the last commands
+!!								# reuses the previous command(eg sudo !!)
+
+##Shortcuts##
+ctrl+shift+C 					# copy in the terminal
+ctrl+shift+V 					# paste in the terminal
+ctrl+L 							# clears terminal
+ctrl+U 							# clears line
+alt+.							# walk through previous commands
+
+alt+tab 						# changes between windows
+alt+~							# changes between windows of the same program
+alt+esc 						# changes between windows and displays them
+
+super+d 						# shows desktop
+super+a 						# shows activities
+super+m 						#toggole notification tray
+
+##Applications commands##
+subl							#sublime text
+pycharm-community 				#pycharm
+
+##Useful commands##
+lsb_release -a 					# prints the working linux distribution
+uname	   						# obtain some additional information from the system
+file /lib/systemd/systemd 		# prints what version(x64 or x32) is running
+export PATH=$PATH:/path/to/my/program # add a path to the $PATH enviroment variable(if written in the terminal it works for the current terminal session only you may add it to .bashrc if you want it to be always there)
+
+#######################################
+##########Special Sections#############
+#######################################
+
+##Booting##
+shutdown -P 					#power-off(default)
+poweroff
+shutdown -r 					#reboot
+reboot
+shutdown -c 					#cancel a pending shutdown
+shutdown now 					# now is time arguemnt
+systemctl suspend				# puts laptop to sleep
+
+##Screenshots##
+PrtScr 			# to take a screenshot of the desktop.
+Alt+PrtScr 		# to take a screenshot of a window.
+Shift+PrtScr 	# to take a screenshot of an area you select.
+
+
+##Navigation##
+pwd
+cd
+	cd ..
+	cd ./bin
+	cd			#change directory to the home
+	cd ~    	#change directory to the home
+	cd -    	#change directory to the previous one
+ls
+	ls -a   	#show hidden files 	
+	ls -l   	#long format
+less
+	less -h 	#Display a complete list less commands and options
+file 			# prints the type of the file
+
+
+
+##Manipulating Files##
+cp - copy files and directories
+mv - move or rename files and directories
+rm - remove files and directories
+mkdir - create directories
+
+
+##Working with Commands##
+type - Display information about command type
+which - Locate a command
+help - Display reference page for shell builtin
+man - Display an on-line command reference
+
+
+##Filters##
+sort 	# Sorts standard input then outputs the sorted result on standard output.
+uniq 	# Given a sorted stream of data from standard input, it removes duplicate lines of data
+grep 	# Examines each line of data it receives from standard input and outputs every line that contains a specified pattern of characters.
+fmt 	# Reads text from standard input, then outputs formatted text on standard output.
+head 	# Outputs the first few lines of its input. Useful for getting the header of a file.
+tail 	# Outputs the last few lines of its input. Useful for things like getting the most recent entries from a log file.
+wc 		# Print newline, word, and byte counts for each file
+
+##less##
+q # quit
+j # one line up
+k # one line down
+g # first line
+G # last line
+/pattern # search for the pattern forward in the file
+?pattern # search for the pattern forward in the file
+n # repeat last search
+N  # repeat last search in the opposite direction
+
+
+##Zip & Unzip##
+zip zipname file1 file2 fileN folder1 folder2 folderN # zipname is the file name after being ziped
+unzip zipname							# unzip .zip files
+unzip zipname -d dirname 				# unzip to a directory
+gunzip filename.gunzip 					# unzip .gz files
+unrar filename.rar 						# unzip .rar files
+unrar -o ./directoryname filename.rar	# unrar to a directory
+
+##Permissions##
+chmod - modify file access rights
+sudo - temporarily become the superuser
+su - temporarily become the superuser
+chown - change file ownership
+chgrp - change a file's group ownership
+
+##Job Control##
+ps - list the processes running on the system
+kill - send a signal to one or more processes (usually to "kill" a process)
+jobs - an alternate way of listing your own processes
+bg - put a process in the background
+fg - put a process in the foreground
+
+
+
+##Common comands##
+echo
+cat
+printenv | less # To see a list of available variables
+rm -r dir  # delete a directory with all files inside
+kill -l    # displays all kill signals can send to processes
+ps x	   # displays all processes
+set        # displays complete list of what is in the environment
+echo $?    # displays the exit status of the last command has been executed
+uname	   # obtain some additional information from the system
+
+##ADVANCED##
+ln 								# to create symbolic links
+find . -type f -print | wc -l   # Displays the total number of files in the current working directory and all of its subdirectories.
+time 							# run programs and summarize system resource usage
+bc 								# provides an arbitrary precision calculator language
+find							# search for files or directories that meet specific criteria
+pritf							# produce formatted output according to the contents of a format string
+
+
+##LATER##
+man test # a list of all the expresions that can be used with test
+awk # a programming language used to build filters
+

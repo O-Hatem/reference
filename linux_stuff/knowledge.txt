@@ -1,0 +1,54 @@
+##File types##
+- # regualr files
+d # directory
+l # symbolic linke
+s # socket file
+b # block file
+c # character devide file
+p # named pipe file or just pipe file
+
+## Commands Types##
+- An executable program like all those files we saw in /usr/bin. Within this category, programs can be compiled binaries such as programs written in C and C++, or programs written in scripting languages such as the shell, Perl, Python, Ruby, etc.
+- A command built into the shell itself. bash provides a number of commands internally called shell builtins. The cd command, for example, is a shell builtin.
+- A shell function. These are miniature shell scripts incorporated into the environment. We will cover configuring the environment and writing shell functions in later lessons, but for now, just be aware that they exist.
+- An alias. Commands that we can define ourselves, built from other commands. This will be covered in a later lesson.
+
+##Processes##
+- ^C kill the process
+- ^Z stop the process
+- if you stopped the process and want to continue it use either bg or fg
+
+
+
+##Wildcards##
+* 	# Matches any characters
+? 	# Matches any single character
+[characters] 	# Matches any character that is a member of the set characters. The set of characters may also be expressed as a POSIX character class such as one of the following:
+POSIX Character Classes 
+	[:alnum:] 	Alphanumeric characters
+	[:alpha:] 	Alphabetic characters
+	[:digit:] 	Numerals
+	[:upper:] 	Uppercase alphabetic characters
+	[:lower:] 	Lowercase alphabetic characters
+[!characters] 	# Matches any character that is not a member of the set characters
+
+
+## using the long form options can make a single command line very long. To combat this problem, we can use a backslash to get the shell to 
+ignore a newline character
+ls -l \
+   --reverse \
+   --human-readable \
+   --full-time
+   
+## The shell does know. Here's how: the shell maintains a list of directories where executable files (programs) are kept, and only searches 
+the directories on that list. If it does not find the program after searching each directory on the list, it will issue the famous command 
+not found error message.
+This list of directories is called our path.
+
+
+## Two types of commands are often contained in the environment. They are aliases and shell functions.
+
+## Bash also has constants but it is rarely used. Instead, if a value is intended to be a constant, it is given an uppercase name to remind the programmer that 
+it should be considered a constant even if it's not being enforced.
+
+## If we don't give the read command the name of a variable to assign its input, it will use the environment variable REPLY.
